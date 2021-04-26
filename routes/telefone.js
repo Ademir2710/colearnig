@@ -8,7 +8,8 @@ router.get('/', function(req, res, next) {
   });
 
   router.post("/", function(req, res, next) {
-    telefones.push(req.body.numero)
+    const tel = {numero:req.body.numero, description: req.body.description}
+    telefones.push(tel)
     console.log(req.body)
     res.redirect("/telefone")
 

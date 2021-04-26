@@ -6,8 +6,9 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <% telefone.forEach(function(tel) { %> <!-- perceorre os numeros de telefone na router get na pagina contato.js -->
-    <p>Welcome to <%= tel %></p>
+    <% telefone.forEach(function(tele) { %> <!-- perceorre os numeros de telefone na router get na pagina contato.js -->
+    <p>Welcome to <%= tele.numero %></p>
+    <p><%=tele.description%></p>
     <% }) %>
     
         <form action="/telefone" method="POST" >
